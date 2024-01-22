@@ -43,13 +43,18 @@ public class FishTankLogicTest1 {
 	@Test
 	public void testJustRightPH() {
 		String report = ftLogic.phStats(ft.getPh());
-		assertEquals("PH is just right", report);
+		assertTrue(report.equals("PH is just right"));
 	}
 	
 	@Test
 	public void testJustRightFishTankReport() {
 		String report = ftLogic.fistTankReport(ft);
 		assertEquals("Fishtank Status: Temperature is just right, Ammonia is at safe levels, PH is just right.", report);
+	}
+	
+	@Test
+	public void testFishTankToString() {
+		assertNotNull(ft.toString());
 	}
 
 }
