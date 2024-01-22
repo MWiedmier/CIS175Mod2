@@ -43,7 +43,7 @@ public class FishTankLogicTest3 {
 	@Test
 	public void testTooLowPH() {
 		String report = ftLogic.phStats(ft.getPh());
-		assertEquals("PH is too low", report);
+		assertTrue(report.equals("PH is too low"));
 	}
 	
 	@Test
